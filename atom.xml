@@ -28,7 +28,108 @@
     <published>2026-03-17T06:30:10.000Z</published>
     <summary>
       <![CDATA[<h1 id="Dify-工作流节点速查手册"><a href="#Dify-工作流节点速查手册" class="headerlink" title="Dify 工作流节点速查手册"></a>Dify 工作流节点速查手册</h1><blockquote>
-<p><strong>使]]>
+<p><strong>使用方法</strong>：用 <code>Ctrl+F</code> 搜索关键词即可直达对应节点。<br>每个节点都标注了中英文关键词、别名、使用场景，先写普通用法，再写进阶用法。</p>
+</blockquote>
+<hr>
+<h2 id="索引导航"><a href="#索引导航" class="headerlink" title="索引导航"></a>索引导航</h2><table>
+<thead>
+<tr>
+<th>节点</th>
+<th>关键词速查</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="#1-%E5%BC%80%E5%A7%8B%E8%8A%82%E7%82%B9-start">开始节点</a></td>
+<td>入口 开始 输入 参数 启动 start input</td>
+</tr>
+<tr>
+<td><a href="#2-%E7%BB%93%E6%9D%9F%E8%8A%82%E7%82%B9-end">结束节点</a></td>
+<td>结束 输出 终止 end output</td>
+</tr>
+<tr>
+<td><a href="#3-%E7%9B%B4%E6%8E%A5%E5%9B%9E%E5%A4%8D%E8%8A%82%E7%82%B9-answer">直接回复节点</a></td>
+<td>回复 答复 输出文字 流式 answer reply</td>
+</tr>
+<tr>
+<td><a href="#4-llm-%E8%8A%82%E7%82%B9">LLM 节点</a></td>
+<td>AI 大模型 GPT Claude 对话 生成 llm prompt</td>
+</tr>
+<tr>
+<td><a href="#5-%E7%9F%A5%E8%AF%86%E5%BA%93%E6%A3%80%E7%B4%A2%E8%8A%82%E7%82%B9-knowledge-retrieval">知识库检索</a></td>
+<td>知识库 RAG 检索 搜索文档 向量 knowledge retrieval</td>
+</tr>
+<tr>
+<td><a href="#6-%E9%97%AE%E9%A2%98%E5%88%86%E7%B1%BB%E8%8A%82%E7%82%B9-question-classifier">问题分类</a></td>
+<td>分类 识别意图 路由 分流 classifier intent</td>
+</tr>
+<tr>
+<td><a href="#7-%E6%9D%A1%E4%BB%B6%E5%88%86%E6%94%AF%E8%8A%82%E7%82%B9-ifelse">条件分支</a></td>
+<td>if else 判断 条件 分支 switch 逻辑 branch</td>
+</tr>
+<tr>
+<td><a href="#8-%E4%BB%A3%E7%A0%81%E8%8A%82%E7%82%B9-code">代码节点</a></td>
+<td>代码 python js 脚本 计算 时间 time 日期 date 格式化 code</td>
+</tr>
+<tr>
+<td><a href="#9-%E6%A8%A1%E6%9D%BF%E8%8A%82%E7%82%B9-template">模板节点</a></td>
+<td>模板 拼接 文本组合 Jinja2 格式化 template</td>
+</tr>
+<tr>
+<td><a href="#10-http-%E8%AF%B7%E6%B1%82%E8%8A%82%E7%82%B9">HTTP 请求</a></td>
+<td>HTTP API 请求 接口 GET POST 外部服务 webhook</td>
+</tr>
+<tr>
+<td><a href="#11-%E5%8F%98%E9%87%8F%E8%B5%8B%E5%80%BC%E8%8A%82%E7%82%B9-variable-assigner">变量赋值</a></td>
+<td>变量 赋值 写入 存储 记忆 会话变量 assign</td>
+</tr>
+<tr>
+<td><a href="#12-%E5%8F%98%E9%87%8F%E8%81%9A%E5%90%88%E8%8A%82%E7%82%B9-variable-aggregator">变量聚合</a></td>
+<td>聚合 合并分支 汇总 aggregator merge</td>
+</tr>
+<tr>
+<td><a href="#13-%E8%BF%AD%E4%BB%A3%E8%8A%82%E7%82%B9-iteration">迭代节点</a></td>
+<td>迭代 循环 for loop 批量 数组 列表 array iteration</td>
+</tr>
+<tr>
+<td><a href="#14-%E5%BE%AA%E7%8E%AF%E8%8A%82%E7%82%B9-loop">循环节点</a></td>
+<td>循环 loop while 重复 渐进 refinement</td>
+</tr>
+<tr>
+<td><a href="#15-%E5%8F%82%E6%95%B0%E6%8F%90%E5%8F%96%E8%8A%82%E7%82%B9-parameter-extractor">参数提取</a></td>
+<td>参数提取 结构化 抽取 提取信息 extractor</td>
+</tr>
+<tr>
+<td><a href="#16-%E6%96%87%E6%A1%A3%E6%8F%90%E5%8F%96%E8%8A%82%E7%82%B9-doc-extractor">文档提取</a></td>
+<td>文档 PDF 文件 提取文本 doc file</td>
+</tr>
+<tr>
+<td><a href="#17-%E5%88%97%E8%A1%A8%E6%93%8D%E4%BD%9C%E8%8A%82%E7%82%B9-list-operator">列表操作</a></td>
+<td>列表 数组 过滤 排序 切片 list filter sort</td>
+</tr>
+<tr>
+<td><a href="#18-agent-%E8%8A%82%E7%82%B9">Agent 节点</a></td>
+<td>agent 自主 推理 工具调用 autonomous</td>
+</tr>
+<tr>
+<td><a href="#19-%E5%B7%A5%E5%85%B7%E8%8A%82%E7%82%B9-tools">工具节点</a></td>
+<td>工具 tool 搜索 画图 插件 search</td>
+</tr>
+<tr>
+<td><a href="#20-%E4%BA%BA%E5%B7%A5%E5%AE%A1%E6%A0%B8%E8%8A%82%E7%82%B9-human-input">人工审核</a></td>
+<td>人工 审核 暂停 确认 human review</td>
+</tr>
+<tr>
+<td><a href="#21-%E7%B3%BB%E7%BB%9F%E5%8F%98%E9%87%8F-system-variables">系统变量</a></td>
+<td>系统变量 用户ID 时间 time 时刻 日期 对话轮次 sys</td>
+</tr>
+<tr>
+<td><a href="#22-%E8%B0%83%E8%AF%95%E4%B8%8E%E6%B5%8B%E8%AF%95">调试与测试</a></td>
+<td>调试 测试 debug preview 日志 log 追踪</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="1-开始节点-Start"><a href="#1-开始节点-Start" class="headerlink" title="1. 开始节点 Start"></a>1. 开始节点 Start</h2><p><strong>关键词</strong>：<code>入口</code> <code>开始</code> <code>输入</code> <code>参数</code> <code>启动</code> <code>start</code> <code>input</code> <code>表单</code> <code>用户输入</code></p>
+<h3 id="普通用法：添加输入变量"><a href="#普通用法：添加输入变量" class="headerlink" title="普通用法：添加输入变量"></a>普通用法：添加输入变量</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">点击「开始」节点</span><br><span class="line">  → 右侧面板</span><br><span class="line">    → 点击「+ 添加输入字段」</span><br><span class="line">      → 填写变量名（如 user_input）</span><br><span class="line">        → 选择类型（文本 / 数字 / 段落 / 下拉 / 文件）</span><br><span class="line">          → 设置是否必填 + 描述</span><br><span class="line">            → 保存</span><br></pre></td></tr></table></figure>]]>
     </summary>
     <title>Dify节点速查手册</title>
     <updated>2026-03-17T06:55:14.649Z</updated>
@@ -44,7 +145,14 @@
     <link href="https://zhtinist.github.io/2026/03/17/hello-world/"/>
     <published>2026-03-17T06:29:04.948Z</published>
     <summary>
-      <![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for]]>
+      <![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>]]>
     </summary>
     <title>Hello World</title>
     <updated>2026-03-17T06:29:04.948Z</updated>
