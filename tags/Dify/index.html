@@ -371,12 +371,12 @@
 </script>
 
 <style>
-  /* 首页卡片化显示：标题 + 正文前几行 */
+  /* 首页卡片化显示：标题 + 正文前几行（更小更紧凑） */
   .home .post-block {
-    border-radius: 10px;
+    border-radius: 12px;
     border: 1px solid #e5e5e5;
-    padding: 18px 22px;
-    margin-bottom: 20px;
+    padding: 14px 18px;
+    margin-bottom: 16px;
     background: #ffffff;
     transition:
       box-shadow 0.18s ease,
@@ -390,11 +390,11 @@
     border-color: #d0d0d0;
   }
 
-  /* 首页摘要只显示前 5 行左右 */
+  /* 首页摘要只显示前 3 行左右，营造小卡片效果 */
   .home .post-block .post-body {
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 5;
+    -webkit-line-clamp: 3;
     overflow: hidden;
   }
 </style>

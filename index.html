@@ -306,11 +306,6 @@
 <h2 id="1-开始节点-Start"><a href="#1-开始节点-Start" class="headerlink" title="1. 开始节点 Start"></a>1. 开始节点 Start</h2><p><strong>关键词</strong>：<code>入口</code> <code>开始</code> <code>输入</code> <code>参数</code> <code>启动</code> <code>start</code> <code>input</code> <code>表单</code> <code>用户输入</code></p>
 <h3 id="普通用法：添加输入变量"><a href="#普通用法：添加输入变量" class="headerlink" title="普通用法：添加输入变量"></a>普通用法：添加输入变量</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">点击「开始」节点</span><br><span class="line">  → 右侧面板</span><br><span class="line">    → 点击「+ 添加输入字段」</span><br><span class="line">      → 填写变量名（如 user_input）</span><br><span class="line">        → 选择类型（文本 / 数字 / 段落 / 下拉 / 文件）</span><br><span class="line">          → 设置是否必填 + 描述</span><br><span class="line">            → 保存</span><br></pre></td></tr></table></figure>
           <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2026/03/17/Dify%E8%8A%82%E7%82%B9%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
           <!--/noindex-->
         
       
@@ -378,11 +373,6 @@
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
 <h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
           <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2026/03/17/hello-world/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
           <!--/noindex-->
         
       
@@ -578,12 +568,12 @@
 </script>
 
 <style>
-  /* 首页卡片化显示：标题 + 正文前几行 */
+  /* 首页卡片化显示：标题 + 正文前几行（更小更紧凑） */
   .home .post-block {
-    border-radius: 10px;
+    border-radius: 12px;
     border: 1px solid #e5e5e5;
-    padding: 18px 22px;
-    margin-bottom: 20px;
+    padding: 14px 18px;
+    margin-bottom: 16px;
     background: #ffffff;
     transition:
       box-shadow 0.18s ease,
@@ -597,11 +587,11 @@
     border-color: #d0d0d0;
   }
 
-  /* 首页摘要只显示前 5 行左右 */
+  /* 首页摘要只显示前 3 行左右，营造小卡片效果 */
   .home .post-block .post-body {
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 5;
+    -webkit-line-clamp: 3;
     overflow: hidden;
   }
 </style>
