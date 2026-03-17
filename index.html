@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-Dify节点速查手册" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2026/03/17/Dify%E8%8A%82%E7%82%B9%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/" class="article-date">
+  <time class="dt-published" datetime="2026-03-17T06:30:10.000Z" itemprop="datePublished">2026-03-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2026/03/17/Dify%E8%8A%82%E7%82%B9%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/">Dify节点速查手册</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Dify-工作流节点速查手册"><a href="#Dify-工作流节点速查手册" class="headerlink" title="Dify 工作流节点速查手册"></a>Dify 工作流节点速查手册</h1><blockquote>
+<p><strong>使用方法</strong>：用 <code>Ctrl+F</code> 搜索关键词即可直达对应节点。<br>每个节点都标注了中英文关键词、别名、使用场景，先写普通用法，再写进阶用法。</p>
+</blockquote>
+<hr>
+<h2 id="索引导航"><a href="#索引导航" class="headerlink" title="索引导航"></a>索引导航</h2><table>
+<thead>
+<tr>
+<th>节点</th>
+<th>关键词速查</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="#1-%E5%BC%80%E5%A7%8B%E8%8A%82%E7%82%B9-start">开始节点</a></td>
+<td>入口 开始 输入 参数 启动 start input</td>
+</tr>
+<tr>
+<td><a href="#2-%E7%BB%93%E6%9D%9F%E8%8A%82%E7%82%B9-end">结束节点</a></td>
+<td>结束 输出 终止 end output</td>
+</tr>
+<tr>
+<td><a href="#3-%E7%9B%B4%E6%8E%A5%E5%9B%9E%E5%A4%8D%E8%8A%82%E7%82%B9-answer">直接回复节点</a></td>
+<td>回复 答复 输出文字 流式 answer reply</td>
+</tr>
+<tr>
+<td><a href="#4-llm-%E8%8A%82%E7%82%B9">LLM 节点</a></td>
+<td>AI 大模型 GPT Claude 对话 生成 llm prompt</td>
+</tr>
+<tr>
+<td><a href="#5-%E7%9F%A5%E8%AF%86%E5%BA%93%E6%A3%80%E7%B4%A2%E8%8A%82%E7%82%B9-knowledge-retrieval">知识库检索</a></td>
+<td>知识库 RAG 检索 搜索文档 向量 knowledge retrieval</td>
+</tr>
+<tr>
+<td><a href="#6-%E9%97%AE%E9%A2%98%E5%88%86%E7%B1%BB%E8%8A%82%E7%82%B9-question-classifier">问题分类</a></td>
+<td>分类 识别意图 路由 分流 classifier intent</td>
+</tr>
+<tr>
+<td><a href="#7-%E6%9D%A1%E4%BB%B6%E5%88%86%E6%94%AF%E8%8A%82%E7%82%B9-ifelse">条件分支</a></td>
+<td>if else 判断 条件 分支 switch 逻辑 branch</td>
+</tr>
+<tr>
+<td><a href="#8-%E4%BB%A3%E7%A0%81%E8%8A%82%E7%82%B9-code">代码节点</a></td>
+<td>代码 python js 脚本 计算 时间 time 日期 date 格式化 code</td>
+</tr>
+<tr>
+<td><a href="#9-%E6%A8%A1%E6%9D%BF%E8%8A%82%E7%82%B9-template">模板节点</a></td>
+<td>模板 拼接 文本组合 Jinja2 格式化 template</td>
+</tr>
+<tr>
+<td><a href="#10-http-%E8%AF%B7%E6%B1%82%E8%8A%82%E7%82%B9">HTTP 请求</a></td>
+<td>HTTP API 请求 接口 GET POST 外部服务 webhook</td>
+</tr>
+<tr>
+<td><a href="#11-%E5%8F%98%E9%87%8F%E8%B5%8B%E5%80%BC%E8%8A%82%E7%82%B9-variable-assigner">变量赋值</a></td>
+<td>变量 赋值 写入 存储 记忆 会话变量 assign</td>
+</tr>
+<tr>
+<td><a href="#12-%E5%8F%98%E9%87%8F%E8%81%9A%E5%90%88%E8%8A%82%E7%82%B9-variable-aggregator">变量聚合</a></td>
+<td>聚合 合并分支 汇总 aggregator merge</td>
+</tr>
+<tr>
+<td><a href="#13-%E8%BF%AD%E4%BB%A3%E8%8A%82%E7%82%B9-iteration">迭代节点</a></td>
+<td>迭代 循环 for loop 批量 数组 列表 array iteration</td>
+</tr>
+<tr>
+<td><a href="#14-%E5%BE%AA%E7%8E%AF%E8%8A%82%E7%82%B9-loop">循环节点</a></td>
+<td>循环 loop while 重复 渐进 refinement</td>
+</tr>
+<tr>
+<td><a href="#15-%E5%8F%82%E6%95%B0%E6%8F%90%E5%8F%96%E8%8A%82%E7%82%B9-parameter-extractor">参数提取</a></td>
+<td>参数提取 结构化 抽取 提取信息 extractor</td>
+</tr>
+<tr>
+<td><a href="#16-%E6%96%87%E6%A1%A3%E6%8F%90%E5%8F%96%E8%8A%82%E7%82%B9-doc-extractor">文档提取</a></td>
+<td>文档 PDF 文件 提取文本 doc file</td>
+</tr>
+<tr>
+<td><a href="#17-%E5%88%97%E8%A1%A8%E6%93%8D%E4%BD%9C%E8%8A%82%E7%82%B9-list-operator">列表操作</a></td>
+<td>列表 数组 过滤 排序 切片 list filter sort</td>
+</tr>
+<tr>
+<td><a href="#18-agent-%E8%8A%82%E7%82%B9">Agent 节点</a></td>
+<td>agent 自主 推理 工具调用 autonomous</td>
+</tr>
+<tr>
+<td><a href="#19-%E5%B7%A5%E5%85%B7%E8%8A%82%E7%82%B9-tools">工具节点</a></td>
+<td>工具 tool 搜索 画图 插件 search</td>
+</tr>
+<tr>
+<td><a href="#20-%E4%BA%BA%E5%B7%A5%E5%AE%A1%E6%A0%B8%E8%8A%82%E7%82%B9-human-input">人工审核</a></td>
+<td>人工 审核 暂停 确认 human review</td>
+</tr>
+<tr>
+<td><a href="#21-%E7%B3%BB%E7%BB%9F%E5%8F%98%E9%87%8F-system-variables">系统变量</a></td>
+<td>系统变量 用户ID 时间 time 时刻 日期 对话轮次 sys</td>
+</tr>
+<tr>
+<td><a href="#22-%E8%B0%83%E8%AF%95%E4%B8%8E%E6%B5%8B%E8%AF%95">调试与测试</a></td>
+<td>调试 测试 debug preview 日志 log 追踪</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="1-开始节点-Start"><a href="#1-开始节点-Start" class="headerlink" title="1. 开始节点 Start"></a>1. 开始节点 Start</h2><p><strong>关键词</strong>：<code>入口</code> <code>开始</code> <code>输入</code> <code>参数</code> <code>启动</code> <code>start</code> <code>input</code> <code>表单</code> <code>用户输入</code></p>
+<h3 id="普通用法：添加输入变量"><a href="#普通用法：添加输入变量" class="headerlink" title="普通用法：添加输入变量"></a>普通用法：添加输入变量</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">点击「开始」节点</span><br><span class="line">  → 右侧面板</span><br><span class="line">    → 点击「+ 添加输入字段」</span><br><span class="line">      → 填写变量名（如 user_input）</span><br><span class="line">        → 选择类型（文本 / 数字 / 段落 / 下拉 / 文件）</span><br><span class="line">          → 设置是否必填 + 描述</span><br><span class="line">            → 保存</span><br></pre></td></tr></table></figure>
+
+<p><strong>变量类型说明</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>文本（String）</td>
+<td>单行文字输入</td>
+</tr>
+<tr>
+<td>段落（Paragraph）</td>
+<td>多行长文本</td>
+</tr>
+<tr>
+<td>数字（Number）</td>
+<td>数值计算</td>
+</tr>
+<tr>
+<td>下拉选项（Select）</td>
+<td>枚举选项</td>
+</tr>
+<tr>
+<td>文件（File）</td>
+<td>上传 PDF、图片等</td>
+</tr>
+</tbody></table>
+<h3 id="进阶用法"><a href="#进阶用法" class="headerlink" title="进阶用法"></a>进阶用法</h3><p><strong>① 下游引用变量格式</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;#start.变量名#&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>例：<code>&#123;&#123;#start.user_input#&#125;&#125;</code></p>
+<p><strong>② 设置默认值</strong><br>在输入字段配置中填写「默认值」，当用户不填时自动使用该值。</p>
+<p><strong>③ 文件上传</strong><br>类型选「文件」→ 可限制文件格式（PDF &#x2F; 图片 &#x2F; 文档）→ 下游用文档提取节点解析内容。</p>
+<hr>
+<h2 id="2-结束节点-End"><a href="#2-结束节点-End" class="headerlink" title="2. 结束节点 End"></a>2. 结束节点 End</h2><p><strong>关键词</strong>：<code>结束</code> <code>输出</code> <code>终止</code> <code>end</code> <code>output</code> <code>最终结果</code> <code>workflow结束</code></p>
+<h3 id="普通用法：配置输出"><a href="#普通用法：配置输出" class="headerlink" title="普通用法：配置输出"></a>普通用法：配置输出</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">点击「结束」节点</span><br><span class="line">  → 右侧面板</span><br><span class="line">    → 「输出变量」区域</span><br><span class="line">      → 点击「+ 添加输出」</span><br><span class="line">        → 选择上游节点的变量（如 llm.text）</span><br><span class="line">          → 保存</span><br></pre></td></tr></table></figure>
+
+<h3 id="进阶用法-1"><a href="#进阶用法-1" class="headerlink" title="进阶用法"></a>进阶用法</h3><p><strong>① 输出多个变量</strong><br>可同时添加多个输出变量，调用方通过 API 获取全部结果。</p>
+<p><strong>② 结构化输出</strong><br>配合「结构化输出」功能，可将 LLM 输出限定为 JSON Schema 格式，便于程序解析。</p>
+<blockquote>
+<p>⚠️ Workflow 类应用必须以结束节点收尾；Chatflow 类应用用「直接回复」节点，不强制要求结束节点。</p>
+</blockquote>
+<hr>
+<h2 id="3-直接回复节点-Answer"><a href="#3-直接回复节点-Answer" class="headerlink" title="3. 直接回复节点 Answer"></a>3. 直接回复节点 Answer</h2><p><strong>关键词</strong>：<code>回复</code> <code>答复</code> <code>输出文字</code> <code>流式输出</code> <code>answer</code> <code>reply</code> <code>streaming</code> <code>实时输出</code></p>
+<h3 id="普通用法：输出对话回复"><a href="#普通用法：输出对话回复" class="headerlink" title="普通用法：输出对话回复"></a>普通用法：输出对话回复</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">点击「+」添加节点 → 选择「直接回复」</span><br><span class="line">  → 右侧面板</span><br><span class="line">    → 在「回复内容」框中输入文本或引用变量</span><br><span class="line">      → 如：&#123;&#123;#llm.text#&#125;&#125;</span><br><span class="line">        → 保存</span><br></pre></td></tr></table></figure>
+
+<h3 id="进阶用法-2"><a href="#进阶用法-2" class="headerlink" title="进阶用法"></a>进阶用法</h3><p><strong>① 非终端输出（中间节点回复）</strong><br>Answer 节点可放在工作流中间，在流程未结束时先输出部分内容（如”正在检索…”），提升用户体验。</p>
+<p><strong>② 流式输出控制</strong><br>在 Answer 节点中引用 LLM 节点变量，可实现 token 级别的流式输出，字符逐字出现。</p>
+<p><strong>③ 迭代内嵌输出</strong><br>在迭代节点内部放置 Answer 节点，每处理一条数据就实时输出一次结果。</p>
+<hr>
+<h2 id="4-LLM-节点"><a href="#4-LLM-节点" class="headerlink" title="4. LLM 节点"></a>4. LLM 节点</h2><p><strong>关键词</strong>：<code>AI</code> <code>大模型</code> <code>GPT</code> <code>Claude</code> <code>对话</code> <code>生成</code> <code>llm</code> <code>prompt</code> <code>语言模型</code> <code>问答</code> <code>总结</code> <code>翻译</code> <code>写作</code></p>
+<h3 id="普通用法：调用-AI-模型"><a href="#普通用法：调用-AI-模型" class="headerlink" title="普通用法：调用 AI 模型"></a>普通用法：调用 AI 模型</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">点击 LLM 节点</span><br><span class="line">  → 右侧面板</span><br><span class="line">    → 点击「模型」下拉 → 选择模型（GPT-4o / Claude / Gemini 等）</span><br><span class="line">      → 填写 SYSTEM（系统提示词）</span><br><span class="line">        → 在「用户」输入框中写 Prompt 并引用变量</span><br><span class="line">          → 调整参数（温度 / Top-P / 最大 Token）</span><br><span class="line">            → 保存</span><br></pre></td></tr></table></figure>
+
+<p><strong>变量引用格式</strong>：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;#节点名.变量名#&#125;&#125;</span><br><span class="line"># 例：&#123;&#123;#start.user_input#&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="进阶用法-3"><a href="#进阶用法-3" class="headerlink" title="进阶用法"></a>进阶用法</h3><p><strong>① 开启记忆（Memory）</strong><br>适用于 Chatflow → 右侧面板 → 开启「记忆」→ 设置上下文窗口大小（对话轮数）→ LLM 自动携带历史对话。</p>
+<p><strong>② 结构化输出（JSON Schema）</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">右侧面板</span><br><span class="line">  → 「输出变量」区域</span><br><span class="line">    → 点击「结构化输出」</span><br><span class="line">      → 定义 JSON Schema</span><br><span class="line">        → LLM 输出将被限定为该结构</span><br></pre></td></tr></table></figure>
+
+<p><strong>③ 视觉能力（Vision）</strong><br>选择支持视觉的模型（如 GPT-4o）→ 在用户输入中引用图片变量 → 模型可理解图片内容。</p>
+<p><strong>④ 角色切换</strong><br>System Prompt 中设定角色人设，User 输入引用实际内容，实现角色扮演、客服、专家等场景。</p>
+<p><strong>⑤ 多轮对话上下文拼接</strong><br>使用模板节点将历史消息手动拼接后传入 LLM，适合精细控制上下文长度的场景。</p>
+<hr>
+<h2 id="5-知识库检索节点-Knowledge-Retrieval"><a href="#5-知识库检索节点-Knowledge-Retrieval" class="headerlink" title="5. 知识库检索节点 Knowledge Retrieval"></a>5. 知识库检索节点 Knowledge Retrieval</h2><p><strong>关键词</strong>：<code>知识库</code> <code>RAG</code> <code>检索</code> <code>搜索文档</code> <code>向量</code> <code>knowledge</code> <code>retrieval</code> <code>文档问答</code> <code>企业知识</code></p>
+<h3 id="普通用法：检索相关内容"><a href="#普通用法：检索相关内容" class="headerlink" title="普通用法：检索相关内容"></a>普通用法：检索相关内容</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">点击「+」→ 选择「知识库检索」</span><br><span class="line">  → 右侧面板</span><br><span class="line">    → 点击「+ 添加知识库」→ 选择已创建的知识库</span><br><span class="line">      → 设置「查询变量」（选择用户输入变量）</span><br><span class="line">        → 调整 Top-K（召回数量，建议 3~6）</span><br><span class="line">          → 设置 Score 阈值（建议 0.5 以上）</span><br><span class="line">            → 保存</span><br></pre></td></tr></table></figure>
+
+<p><strong>下游引用</strong>：在 LLM 节点的 Prompt 中引用 <code>&#123;&#123;#knowledge.text#&#125;&#125;</code>。</p>
+<h3 id="进阶用法-4"><a href="#进阶用法-4" class="headerlink" title="进阶用法"></a>进阶用法</h3><p><strong>① 检索模式选择</strong></p>
+<table>
+<thead>
+<tr>
+<th>模式</th>
+<th>适合场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>语义检索</td>
+<td>语义相似，容忍措辞不同</td>
+</tr>
+<tr>
+<td>全文检索</td>
+<td>精确关键词匹配</td>
+</tr>
+<tr>
+<td>混合检索</td>
+<td>两者结合，效果最佳（推荐）</td>
+</tr>
+</tbody></table>
+<p><strong>② 多知识库并行检索</strong><br>添加多个知识库 → 系统自动合并结果 → 按相关性排序返回。</p>
+<p><strong>③ 重排序（Rerank）</strong><br>开启 Rerank 模型 → 召回结果二次精排 → 提升准确性（需配置 Rerank API）。</p>
+<p><strong>④ 配合模板节点格式化检索结果</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;% for item in chunks %&#125;</span><br><span class="line">### 第 &#123;&#123; loop.index &#125;&#125; 条（相似度：&#123;&#123; item.metadata.score &#125;&#125;）</span><br><span class="line">&#123;&#123; item.content &#125;&#125;</span><br><span class="line">---</span><br><span class="line">&#123;% endfor %&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="6-问题分类节点-Question-Classifier"><a href="#6-问题分类节点-Question-Classifier" class="headerlink" title="6. 问题分类节点 Question Classifier"></a>6. 问题分类节点 Question Classifier</h2><p><strong>关键词</strong>：<code>分类</code> <code>识别意图</code> <code>路由</code> <code>分流</code> <code>classifier</code> <code>intent</code> <code>意图识别</code> <code>问题类型</code></p>
+<h3 id="普通用法：自动分类路由"><a href="#普通用法：自动分类路由" class="headerlink" title="普通用法：自动分类路由"></a>普通用法：自动分类路由</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">点击「+」→ 选择「问题分类」</span><br><span class="line">  → 右侧面板</span><br><span class="line">    → 选择模型</span><br><span class="line">      → 设置输入变量（通常为用户输入）</span><br><span class="line">        → 点击「+ 添加分类」</span><br><span class="line">          → 输入分类名称 + 详细描述</span><br><span class="line">            → 重复添加所有分类</span><br><span class="line">              → 画布上为每个分类出口连接对应节点</span><br><span class="line">                → 保存</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>💡 描述越具体越准确。例如：「用户询问产品价格、套餐费用、优惠活动等价格相关问题」比「价格」效果好 10 倍。</p>
+</blockquote>
+<h3 id="进阶用法-5"><a href="#进阶用法-5" class="headerlink" title="进阶用法"></a>进阶用法</h3><p><strong>① 兜底分类</strong><br>最后一个分类设为「其他 &#x2F; 无法识别」→ 连接人工兜底或通用回复节点。</p>
+<p><strong>② 嵌套分类</strong><br>第一层分类后，在某个分支内再加一个分类节点 → 实现二级意图路由（如：先分「售前&#x2F;售后」，再分「技术&#x2F;账单」）。</p>
+<p><strong>③ 配合变量聚合节点</strong><br>多个分类分支处理完成后 → 接「变量聚合」节点 → 合并为统一变量 → 传入结束节点统一输出。</p>
+<hr>
+<h2 id="7-条件分支节点-IF-ELSE"><a href="#7-条件分支节点-IF-ELSE" class="headerlink" title="7. 条件分支节点 IF&#x2F;ELSE"></a>7. 条件分支节点 IF&#x2F;ELSE</h2><p><strong>关键词</strong>：<code>if</code> <code>else</code> <code>elif</code> <code>判断</code> <code>条件</code> <code>分支</code> <code>switch</code> <code>逻辑</code> <code>branch</code> <code>检测</code> <code>过滤</code> <code>校验</code> <code>是否</code> <code>true</code> <code>false</code></p>
+<h3 id="普通用法：添加单个条件"><a href="#普通用法：添加单个条件" class="headerlink" title="普通用法：添加单个条件"></a>普通用法：添加单个条件</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">点击 IF/ELSE 节点</span><br><span class="line">  → 右侧面板</span><br><span class="line">    → IF 区域</span><br><span class="line">      → 选择变量（如 检测敏感词.label）</span><br><span class="line">        → 选择运算符（是 / 不是 / 包含 / 为空 / 大于 等）</span><br><span class="line">          → 填写比较值（如 Normal）</span><br><span class="line">            → 保存</span><br></pre></td></tr></table></figure>
+
+<h3 id="普通用法：添加多条件-OR-AND"><a href="#普通用法：添加多条件-OR-AND" class="headerlink" title="普通用法：添加多条件 OR &#x2F; AND"></a>普通用法：添加多条件 OR &#x2F; AND</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">点击 IF/ELSE 节点</span><br><span class="line">  → 右侧面板</span><br><span class="line">    → IF 区域</span><br><span class="line">      → 填写第一个条件</span><br><span class="line">        → 点击「+ 添加条件」</span><br><span class="line">          → 填写第二个条件</span><br><span class="line">            → 点击两条件之间的「OR①」标签</span><br><span class="line">              → 切换为 AND（同时满足）或 OR（满足任一）</span><br><span class="line">                → 保存</span><br></pre></td></tr></table></figure>
+
+<h3 id="普通用法：添加-ELIF-多分支"><a href="#普通用法：添加-ELIF-多分支" class="headerlink" title="普通用法：添加 ELIF 多分支"></a>普通用法：添加 ELIF 多分支</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">右侧面板</span><br><span class="line">  → IF 区域下方</span><br><span class="line">    → 点击「+ ELIF」</span><br><span class="line">      → 配置新的条件逻辑</span><br><span class="line">        → 画布上为该 ELIF 出口连接节点</span><br><span class="line">          → 保存</span><br></pre></td></tr></table></figure>
+
+<p><strong>运算符速查</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>是 &#x2F; 等于</td>
+<td>完全匹配</td>
+</tr>
+<tr>
+<td>不是</td>
+<td>不等于</td>
+</tr>
+<tr>
+<td>包含</td>
+<td>字符串包含</td>
+</tr>
+<tr>
+<td>不包含</td>
+<td>字符串不包含</td>
+</tr>
+<tr>
+<td>为空</td>
+<td>变量为 null &#x2F; 空字符串</td>
+</tr>
+<tr>
+<td>不为空</td>
+<td>变量有值</td>
+</tr>
+<tr>
+<td>大于 &#x2F; 小于</td>
+<td>数值比较</td>
+</tr>
+</tbody></table>
+<h3 id="进阶用法-6"><a href="#进阶用法-6" class="headerlink" title="进阶用法"></a>进阶用法</h3><p><strong>① 容错分支设计（error 也放行）</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">IF: label 是 &quot;Normal&quot;  OR  label 是 &quot;error&quot;</span><br><span class="line">→ 继续主流程（error 时容错放行）</span><br><span class="line"></span><br><span class="line">ELSE:</span><br><span class="line">→ 拦截处理（真正检测到问题时）</span><br></pre></td></tr></table></figure>
+
+<p><strong>② 对话轮次判断</strong><br>引用系统变量 <code>sys.dialogue_count</code> → 判断「是否第一轮对话」→ 分别走新用户引导 &#x2F; 老用户直接回复。</p>
+<p><strong>③ 变量为空检测</strong><br>判断某变量「为空」→ 走初始化分支（如首次设置语言偏好）→ 「不为空」走正常流程。</p>
+<p><strong>④ 数值区间判断（多 ELIF）</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">IF: score &gt;= 90  → 优秀分支</span><br><span class="line">ELIF: score &gt;= 60  → 及格分支</span><br><span class="line">ELSE:  → 不及格分支</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="8-代码节点-Code"><a href="#8-代码节点-Code" class="headerlink" title="8. 代码节点 Code"></a>8. 代码节点 Code</h2><p><strong>关键词</strong>：<code>代码</code> <code>python</code> <code>js</code> <code>javascript</code> <code>脚本</code> <code>计算</code> <code>时间</code> <code>time</code> <code>日期</code> <code>date</code> <code>时刻</code> <code>格式化</code> <code>format</code> <code>JSON解析</code> <code>数据处理</code> <code>自定义逻辑</code> <code>code</code> <code>数学</code> <code>正则</code></p>
+<h3 id="普通用法：编写代码处理数据"><a href="#普通用法：编写代码处理数据" class="headerlink" title="普通用法：编写代码处理数据"></a>普通用法：编写代码处理数据</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">点击「+」→ 选择「代码执行」</span><br><span class="line">  → 右侧面板</span><br><span class="line">    → 选择语言（Python 3 / JavaScript）</span><br><span class="line">      → 「输入变量」→「+ 添加」→ 定义需引用的上游变量名</span><br><span class="line">        → 「输出变量」→「+ 添加」→ 定义输出变量名和类型</span><br><span class="line">          → 在代码框中编写逻辑</span><br><span class="line">            → 点击「测试运行」验证</span><br><span class="line">              → 保存</span><br></pre></td></tr></table></figure>
+
+<p><strong>代码模板（Python）</strong>：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>(<span class="params">input_var: <span class="built_in">str</span></span>) -&gt; <span class="built_in">dict</span>:</span><br><span class="line">    result = input_var.upper()</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        <span class="string">&quot;output_var&quot;</span>: result</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>⚠️ 返回值必须是 <code>dict</code>，key 对应已定义的输出变量名。</p>
+</blockquote>
+<h3 id="常用代码片段"><a href="#常用代码片段" class="headerlink" title="常用代码片段"></a>常用代码片段</h3><p><strong>① 获取当前时间 &#x2F; 日期</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>() -&gt; <span class="built_in">dict</span>:</span><br><span class="line">    now = datetime.datetime.now()</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        <span class="string">&quot;current_time&quot;</span>: now.strftime(<span class="string">&quot;%Y-%m-%d %H:%M:%S&quot;</span>),</span><br><span class="line">        <span class="string">&quot;current_date&quot;</span>: now.strftime(<span class="string">&quot;%Y年%m月%d日&quot;</span>),</span><br><span class="line">        <span class="string">&quot;timestamp&quot;</span>: <span class="built_in">int</span>(now.timestamp())</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>② 解析 JSON 字符串</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>(<span class="params">json_str: <span class="built_in">str</span></span>) -&gt; <span class="built_in">dict</span>:</span><br><span class="line">    data = json.loads(json_str)</span><br><span class="line">    name = data.get(<span class="string">&quot;data&quot;</span>, &#123;&#125;).get(<span class="string">&quot;name&quot;</span>, <span class="string">&quot;&quot;</span>)</span><br><span class="line">    <span class="keyword">return</span> &#123;<span class="string">&quot;name&quot;</span>: name&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>③ 文本清洗 &#x2F; 去除空白</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>(<span class="params">text: <span class="built_in">str</span></span>) -&gt; <span class="built_in">dict</span>:</span><br><span class="line">    cleaned = re.sub(<span class="string">r&#x27;\s+&#x27;</span>, <span class="string">&#x27; &#x27;</span>, text).strip()</span><br><span class="line">    <span class="keyword">return</span> &#123;<span class="string">&quot;cleaned_text&quot;</span>: cleaned&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>④ 数组合并（多知识库结果聚合）</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>(<span class="params">list1: <span class="built_in">list</span>, list2: <span class="built_in">list</span></span>) -&gt; <span class="built_in">dict</span>:</span><br><span class="line">    merged = list1 + list2</span><br><span class="line">    <span class="keyword">return</span> &#123;<span class="string">&quot;merged&quot;</span>: merged&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>⑤ 计算数值 &#x2F; 统计</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>(<span class="params">numbers: <span class="built_in">list</span></span>) -&gt; <span class="built_in">dict</span>:</span><br><span class="line">    avg = <span class="built_in">sum</span>(numbers) / <span class="built_in">len</span>(numbers) <span class="keyword">if</span> numbers <span class="keyword">else</span> <span class="number">0</span></span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        <span class="string">&quot;average&quot;</span>: <span class="built_in">round</span>(avg, <span class="number">2</span>),</span><br><span class="line">        <span class="string">&quot;total&quot;</span>: <span class="built_in">sum</span>(numbers),</span><br><span class="line">        <span class="string">&quot;count&quot;</span>: <span class="built_in">len</span>(numbers)</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="进阶用法-7"><a href="#进阶用法-7" class="headerlink" title="进阶用法"></a>进阶用法</h3><p><strong>① 引入第三方库</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>(<span class="params">data: <span class="built_in">list</span></span>) -&gt; <span class="built_in">dict</span>:</span><br><span class="line">    df = pd.DataFrame(data)</span><br><span class="line">    <span class="keyword">return</span> &#123;<span class="string">&quot;mean&quot;</span>: <span class="built_in">float</span>(np.mean(df[<span class="string">&#x27;values&#x27;</span>]))&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>支持：<code>numpy</code> <code>pandas</code> <code>requests</code> <code>json</code> <code>math</code> <code>datetime</code> <code>re</code> 等</p>
+</blockquote>
+<p><strong>② 配置错误处理分支</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">代码节点右上角「···」</span><br><span class="line">  → 开启「异常处理」</span><br><span class="line">    → 配置 Fail 分支（节点异常时走此分支）</span><br><span class="line">      → 避免整个工作流中断</span><br></pre></td></tr></table></figure>
+
+<p><strong>③ 开启重试策略</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">节点设置</span><br><span class="line">  → 「错误重试」</span><br><span class="line">    → 设置最大重试次数（如 3 次）</span><br><span class="line">      → 设置重试间隔（如 1 秒）</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="9-模板节点-Template"><a href="#9-模板节点-Template" class="headerlink" title="9. 模板节点 Template"></a>9. 模板节点 Template</h2><p><strong>关键词</strong>：<code>模板</code> <code>拼接</code> <code>文本组合</code> <code>Jinja2</code> <code>格式化</code> <code>template</code> <code>字符串拼接</code> <code>排版</code> <code>构建Prompt</code></p>
+<h3 id="普通用法：拼接多个变量为一段文字"><a href="#普通用法：拼接多个变量为一段文字" class="headerlink" title="普通用法：拼接多个变量为一段文字"></a>普通用法：拼接多个变量为一段文字</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">点击「+」→ 选择「模板转换」</span><br><span class="line">  → 右侧面板</span><br><span class="line">    → 「输入变量」→「+ 添加」→ 选择需要引用的变量</span><br><span class="line">      → 在模板框中用 &#123;&#123; 变量名 &#125;&#125; 插入变量</span><br><span class="line">        → 预览输出结果</span><br><span class="line">          → 保存</span><br></pre></td></tr></table></figure>
+
+<p><strong>基础示例</strong>：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">你好，&#123;&#123; name &#125;&#125;！</span><br><span class="line">你的订单编号是 &#123;&#123; order_id &#125;&#125;，金额为 &#123;&#123; amount &#125;&#125; 元。</span><br></pre></td></tr></table></figure>
+
+<h3 id="进阶用法-8"><a href="#进阶用法-8" class="headerlink" title="进阶用法"></a>进阶用法</h3><p><strong>① 条件判断</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if score &gt;= 90 %&#125;</span><br><span class="line">恭喜，优秀！</span><br><span class="line">&#123;% elif score &gt;= 60 %&#125;</span><br><span class="line">合格，继续加油。</span><br><span class="line">&#123;% else %&#125;</span><br><span class="line">需要努力了。</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>② 循环渲染列表</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% for item in items %&#125;</span><br><span class="line">&#123;&#123; loop.index &#125;&#125;. &#123;&#123; item.title &#125;&#125;：&#123;&#123; item.content &#125;&#125;</span><br><span class="line">&#123;% endfor %&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>③ 格式化知识库检索结果为 Markdown</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;% for item in chunks %&#125;</span><br><span class="line">### 参考资料 &#123;&#123; loop.index &#125;&#125;（相似度：&#123;&#123; item.metadata.score | default(&#x27;N/A&#x27;) &#125;&#125;）</span><br><span class="line">&#123;&#123; item.content | replace(&#x27;\n&#x27;, &#x27;\n\n&#x27;) &#125;&#125;</span><br><span class="line">---</span><br><span class="line">&#123;% endfor %&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>④ 构建结构化 Prompt</strong><br>将用户输入、检索结果、历史记录分别引入 → 用模板拼成完整 Prompt → 传给 LLM 节点。</p>
+<hr>
+<h2 id="10-HTTP-请求节点"><a href="#10-HTTP-请求节点" class="headerlink" title="10. HTTP 请求节点"></a>10. HTTP 请求节点</h2><p><strong>关键词</strong>：<code>HTTP</code> <code>API</code> <code>请求</code> <code>接口</code> <code>GET</code> <code>POST</code> <code>PUT</code> <code>DELETE</code> <code>外部服务</code> <code>webhook</code> <code>第三方</code> <code>调用接口</code> <code>数据获取</code></p>
+<h3 id="普通用法：发起-GET-请求"><a href="#普通用法：发起-GET-请求" class="headerlink" title="普通用法：发起 GET 请求"></a>普通用法：发起 GET 请求</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">点击「+」→ 选择「HTTP 请求」</span><br><span class="line">  → 右侧面板</span><br><span class="line">    → 选择方法：GET</span><br><span class="line">      → 填写 URL（可嵌入变量：https://api.example.com/&#123;&#123;#start.id#&#125;&#125;）</span><br><span class="line">        → 点击「Headers」→ 添加请求头</span><br><span class="line">          → 设置超时时间（秒）</span><br><span class="line">            → 点击「测试请求」验证</span><br><span class="line">              → 保存</span><br></pre></td></tr></table></figure>
+
+<h3 id="普通用法：发起-POST-请求（带-Body）"><a href="#普通用法：发起-POST-请求（带-Body）" class="headerlink" title="普通用法：发起 POST 请求（带 Body）"></a>普通用法：发起 POST 请求（带 Body）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">选择方法：POST</span><br><span class="line">  → 填写 URL</span><br><span class="line">    → 点击「Body」标签</span><br><span class="line">      → 选择格式（JSON / Form-data / Raw）</span><br><span class="line">        → 填写请求体（可引用变量）</span><br><span class="line">          → 保存</span><br></pre></td></tr></table></figure>
+
+<p><strong>引用返回值</strong>：<code>&#123;&#123;#http节点名.body#&#125;&#125;</code></p>
+<h3 id="进阶用法-9"><a href="#进阶用法-9" class="headerlink" title="进阶用法"></a>进阶用法</h3><p><strong>① 携带鉴权 Header</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Headers 中添加：</span><br><span class="line">  Key:   Authorization</span><br><span class="line">  Value: Bearer &#123;&#123;#start.api_token#&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>② 解析 HTTP 返回的 JSON</strong><br>HTTP 节点返回 body 是字符串 → 下接<strong>代码节点</strong>解析：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>(<span class="params">body: <span class="built_in">str</span></span>) -&gt; <span class="built_in">dict</span>:</span><br><span class="line">    data = json.loads(body)</span><br><span class="line">    <span class="keyword">return</span> &#123;<span class="string">&quot;result&quot;</span>: data[<span class="string">&quot;data&quot;</span>][<span class="string">&quot;name&quot;</span>]&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>③ 配置重试 + 异常分支</strong><br>开启「错误重试」→ 防止网络抖动失败 → 同时配置 Fail 分支处理超时情况。</p>
+<p><strong>④ 动态构建请求体</strong><br>用模板节点先将变量拼成 JSON 字符串 → 传入 HTTP 节点的 Body（Raw 模式）。</p>
+<hr>
+<h2 id="11-变量赋值节点-Variable-Assigner"><a href="#11-变量赋值节点-Variable-Assigner" class="headerlink" title="11. 变量赋值节点 Variable Assigner"></a>11. 变量赋值节点 Variable Assigner</h2><p><strong>关键词</strong>：<code>变量</code> <code>赋值</code> <code>写入</code> <code>存储</code> <code>记忆</code> <code>会话变量</code> <code>assign</code> <code>持久化</code> <code>保存状态</code> <code>记住用户</code> <code>跨轮次</code></p>
+<h3 id="普通用法：写入会话变量"><a href="#普通用法：写入会话变量" class="headerlink" title="普通用法：写入会话变量"></a>普通用法：写入会话变量</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">点击「+」→ 选择「变量赋值」</span><br><span class="line">  → 右侧面板</span><br><span class="line">    → 点击「+ 设置变量」</span><br><span class="line">      → 「写入变量」：选择已创建的会话变量（目标）</span><br><span class="line">        → 「赋值变量」：选择来源节点的变量</span><br><span class="line">          → 选择写入模式</span><br><span class="line">            → 保存</span><br></pre></td></tr></table></figure>
+
+<p><strong>写入模式</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>模式</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>覆盖</td>
+<td>替换旧值</td>
+</tr>
+<tr>
+<td>追加</td>
+<td>在数组末尾添加新元素</td>
+</tr>
+<tr>
+<td>清空</td>
+<td>清除变量值</td>
+</tr>
+</tbody></table>
+<h3 id="进阶用法-10"><a href="#进阶用法-10" class="headerlink" title="进阶用法"></a>进阶用法</h3><p><strong>① 记住用户语言偏好</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">对话开始</span><br><span class="line">  → IF 节点：判断 language 变量「为空」</span><br><span class="line">    → 为空：LLM 提取语言 → 变量赋值（覆盖）→ 写入 language 会话变量</span><br><span class="line">    → 不为空：直接引用已存语言继续对话</span><br></pre></td></tr></table></figure>
+
+<p><strong>② 累积对话记忆（追加模式）</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">每轮对话结束</span><br><span class="line">  → 变量赋值节点</span><br><span class="line">    → 写入模式：追加</span><br><span class="line">      → 将本轮摘要追加到 memories 数组</span><br></pre></td></tr></table></figure>
+
+<p><strong>③ escape 函数转换（存入数组前）</strong><br>将 LLM 输出的文本字符串转为适合存入 array[object] 的格式：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>(<span class="params">text: <span class="built_in">str</span></span>) -&gt; <span class="built_in">dict</span>:</span><br><span class="line">    obj = &#123;<span class="string">&quot;content&quot;</span>: text, <span class="string">&quot;role&quot;</span>: <span class="string">&quot;assistant&quot;</span>&#125;</span><br><span class="line">    <span class="keyword">return</span> &#123;<span class="string">&quot;item&quot;</span>: obj&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="12-变量聚合节点-Variable-Aggregator"><a href="#12-变量聚合节点-Variable-Aggregator" class="headerlink" title="12. 变量聚合节点 Variable Aggregator"></a>12. 变量聚合节点 Variable Aggregator</h2><p><strong>关键词</strong>：<code>聚合</code> <code>合并分支</code> <code>汇总</code> <code>aggregator</code> <code>merge</code> <code>多分支合并</code> <code>统一输出</code> <code>收束</code></p>
+<h3 id="普通用法：合并多个分支为一个变量"><a href="#普通用法：合并多个分支为一个变量" class="headerlink" title="普通用法：合并多个分支为一个变量"></a>普通用法：合并多个分支为一个变量</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">点击「+」→ 选择「变量聚合」</span><br><span class="line">  → 右侧面板</span><br><span class="line">    → 点击「+ 添加变量」</span><br><span class="line">      → 选择各分支的输出变量（功能相同、名称不同）</span><br><span class="line">        → 节点自动将命中的分支变量映射为统一输出</span><br><span class="line">          → 下游节点引用聚合节点的输出变量</span><br><span class="line">            → 保存</span><br></pre></td></tr></table></figure>
+
+<h3 id="进阶用法-11"><a href="#进阶用法-11" class="headerlink" title="进阶用法"></a>进阶用法</h3><p><strong>① 问题分类后的聚合</strong><br>问题分类节点将流量分为 3 个分支 → 各分支分别由不同 LLM 处理 → 3 个分支的输出接入同一个变量聚合节点 → 统一输出给结束节点。</p>
+<p><strong>② 条件分支后的聚合</strong><br>IF&#x2F;ELSE 各分支执行不同操作 → 最终聚合为同一变量 → 避免在结束节点重复引用多个变量。</p>
+<hr>
+<h2 id="13-迭代节点-Iteration"><a href="#13-迭代节点-Iteration" class="headerlink" title="13. 迭代节点 Iteration"></a>13. 迭代节点 Iteration</h2><p><strong>关键词</strong>：<code>迭代</code> <code>循环</code> <code>for</code> <code>loop</code> <code>批量</code> <code>数组</code> <code>列表</code> <code>array</code> <code>iteration</code> <code>批处理</code> <code>逐条处理</code> <code>遍历</code></p>
+<h3 id="普通用法：对数组逐条处理"><a href="#普通用法：对数组逐条处理" class="headerlink" title="普通用法：对数组逐条处理"></a>普通用法：对数组逐条处理</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">点击「+」→ 选择「迭代」</span><br><span class="line">  → 右侧面板</span><br><span class="line">    → 设置「输入变量」：选择 Array 类型变量</span><br><span class="line">      → 双击节点进入内部画布</span><br><span class="line">        → 添加处理节点（如 LLM 节点）</span><br><span class="line">          → 在内部节点引用内置变量：</span><br><span class="line">              item（当前元素）</span><br><span class="line">              index（当前序号，从 0 开始）</span><br><span class="line">            → 配置输出变量</span><br><span class="line">              → 保存退出</span><br></pre></td></tr></table></figure>
+
+<h3 id="进阶用法-12"><a href="#进阶用法-12" class="headerlink" title="进阶用法"></a>进阶用法</h3><p><strong>① 开启并行模式（加速处理）</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">右侧面板</span><br><span class="line">  → 开启「并行模式」</span><br><span class="line">    → 设置并发数（最大 10）</span><br><span class="line">      → 适合互相独立的批量任务（翻译、摘要等）</span><br></pre></td></tr></table></figure>
+
+<p><strong>② 迭代内实时流式输出</strong><br>迭代内部放置「直接回复」节点 → 每处理完一条立即输出 → 用户实时看到进度。</p>
+<p><strong>③ 错误处理策略</strong></p>
+<table>
+<thead>
+<tr>
+<th>策略</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>终止</td>
+<td>遇到错误立即停止整个迭代</td>
+</tr>
+<tr>
+<td>继续</td>
+<td>跳过错误条目，继续处理剩余数据</td>
+</tr>
+<tr>
+<td>移除错误输出</td>
+<td>只输出成功的结果</td>
+</tr>
+</tbody></table>
+<p><strong>④ 长文分块翻译流程</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">文本输入</span><br><span class="line">  → 代码节点：按段落切割 → 输出 Array</span><br><span class="line">    → 迭代节点</span><br><span class="line">      → 内部：LLM 翻译单个段落</span><br><span class="line">        → 输出翻译后的 Array</span><br><span class="line">          → 模板节点：将数组拼接为完整译文</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>⚠️ 迭代内部<strong>不支持</strong>放置「直接回复」以外的终止类节点。</p>
+</blockquote>
+<hr>
+<h2 id="14-循环节点-Loop"><a href="#14-循环节点-Loop" class="headerlink" title="14. 循环节点 Loop"></a>14. 循环节点 Loop</h2><p><strong>关键词</strong>：<code>循环</code> <code>loop</code> <code>while</code> <code>重复</code> <code>渐进</code> <code>refinement</code> <code>迭代优化</code> <code>自我改进</code> <code>反复执行</code> <code>条件退出</code></p>
+<h3 id="与迭代节点的区别"><a href="#与迭代节点的区别" class="headerlink" title="与迭代节点的区别"></a>与迭代节点的区别</h3><table>
+<thead>
+<tr>
+<th></th>
+<th>迭代节点</th>
+<th>循环节点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>处理对象</td>
+<td>数组的每个元素</td>
+<td>同一任务重复执行</td>
+</tr>
+<tr>
+<td>退出条件</td>
+<td>数组遍历完毕</td>
+<td>满足指定条件</td>
+</tr>
+<tr>
+<td>典型场景</td>
+<td>批量翻译、批量摘要</td>
+<td>内容优化、质量检查</td>
+</tr>
+</tbody></table>
+<h3 id="普通用法：配置循环"><a href="#普通用法：配置循环" class="headerlink" title="普通用法：配置循环"></a>普通用法：配置循环</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">点击「+」→ 选择「循环」</span><br><span class="line">  → 右侧面板</span><br><span class="line">    → 定义「循环变量」（跨循环持久保存的变量）</span><br><span class="line">      → 设置「退出条件」（何时停止循环）</span><br><span class="line">        → 双击进入内部画布</span><br><span class="line">          → 添加处理逻辑（如 LLM 优化内容）</span><br><span class="line">            → 添加「变量赋值」更新循环变量</span><br><span class="line">              → 添加「退出循环」节点（满足条件时触发）</span><br><span class="line">                → 保存</span><br></pre></td></tr></table></figure>
+
+<h3 id="进阶用法：内容渐进优化"><a href="#进阶用法：内容渐进优化" class="headerlink" title="进阶用法：内容渐进优化"></a>进阶用法：内容渐进优化</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">循环变量：verse（当前诗句）、num（计数器，初始为 0）</span><br><span class="line"></span><br><span class="line">内部节点：</span><br><span class="line">  → LLM：根据上一版 verse 优化内容</span><br><span class="line">    → 变量赋值：更新 verse 和 num</span><br><span class="line">      → IF 节点：num &gt; 3</span><br><span class="line">        → 是：触发「退出循环」节点</span><br><span class="line">        → 否：继续下一轮</span><br></pre></td></tr></table></figure>
+
+<p><strong>循环变量引用格式</strong>：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;#loop.变量名#&#125;&#125;</span><br><span class="line"># 例：&#123;&#123;#loop.verse#&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="15-参数提取节点-Parameter-Extractor"><a href="#15-参数提取节点-Parameter-Extractor" class="headerlink" title="15. 参数提取节点 Parameter Extractor"></a>15. 参数提取节点 Parameter Extractor</h2><p><strong>关键词</strong>：<code>参数提取</code> <code>结构化</code> <code>抽取</code> <code>提取信息</code> <code>extractor</code> <code>自然语言转结构</code> <code>实体抽取</code> <code>信息抽取</code></p>
+<h3 id="普通用法：从自然语言中提取结构化参数"><a href="#普通用法：从自然语言中提取结构化参数" class="headerlink" title="普通用法：从自然语言中提取结构化参数"></a>普通用法：从自然语言中提取结构化参数</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">点击「+」→ 选择「参数提取」</span><br><span class="line">  → 右侧面板</span><br><span class="line">    → 选择模型</span><br><span class="line">      → 设置输入变量（用户自然语言输入）</span><br><span class="line">        → 点击「+ 添加参数」</span><br><span class="line">          → 填写参数名、类型、描述（描述要说明如何提取）</span><br><span class="line">            → 保存</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例</strong>：从「我想订明天去北京的机票」中提取：</p>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>date</td>
+<td>String</td>
+<td>出发日期</td>
+</tr>
+<tr>
+<td>destination</td>
+<td>String</td>
+<td>目的地城市</td>
+</tr>
+<tr>
+<td>type</td>
+<td>String</td>
+<td>服务类型（机票&#x2F;火车等）</td>
+</tr>
+</tbody></table>
+<h3 id="进阶用法-13"><a href="#进阶用法-13" class="headerlink" title="进阶用法"></a>进阶用法</h3><p><strong>① 提取后直接传入工具&#x2F;HTTP 节点</strong><br>提取出的结构化参数 → 直接映射为 HTTP 请求的 Query 参数或工具的输入。</p>
+<p><strong>② 配合 IF 节点验证提取结果</strong><br>提取完成 → IF 节点判断关键参数「是否为空」→ 为空则提示用户补充信息。</p>
+<hr>
+<h2 id="16-文档提取节点-Doc-Extractor"><a href="#16-文档提取节点-Doc-Extractor" class="headerlink" title="16. 文档提取节点 Doc Extractor"></a>16. 文档提取节点 Doc Extractor</h2><p><strong>关键词</strong>：<code>文档</code> <code>PDF</code> <code>文件</code> <code>提取文本</code> <code>doc</code> <code>file</code> <code>docx</code> <code>读取文件</code> <code>解析文件</code> <code>上传文件</code></p>
+<h3 id="普通用法：提取上传文件的文本"><a href="#普通用法：提取上传文件的文本" class="headerlink" title="普通用法：提取上传文件的文本"></a>普通用法：提取上传文件的文本</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">点击「+」→ 选择「文档提取」</span><br><span class="line">  → 右侧面板</span><br><span class="line">    → 「输入变量」：选择文件类型变量（来自开始节点的 File 输入）</span><br><span class="line">      → 保存</span><br></pre></td></tr></table></figure>
+
+<p><strong>输出变量</strong>：<code>doc_extractor.text</code>（提取出的纯文本内容）</p>
+<h3 id="进阶用法-14"><a href="#进阶用法-14" class="headerlink" title="进阶用法"></a>进阶用法</h3><p><strong>① 文件 → 文本 → 知识库问答</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">开始节点（File 输入）</span><br><span class="line">  → 文档提取节点（获取文本）</span><br><span class="line">    → LLM 节点（分析 / 总结文档内容）</span><br></pre></td></tr></table></figure>
+
+<p><strong>② 文件 → 分块 → 迭代处理</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">文档提取</span><br><span class="line">  → 代码节点（按段落切割为 Array）</span><br><span class="line">    → 迭代节点（逐段处理）</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="17-列表操作节点-List-Operator"><a href="#17-列表操作节点-List-Operator" class="headerlink" title="17. 列表操作节点 List Operator"></a>17. 列表操作节点 List Operator</h2><p><strong>关键词</strong>：<code>列表</code> <code>数组</code> <code>过滤</code> <code>排序</code> <code>切片</code> <code>list</code> <code>filter</code> <code>sort</code> <code>slice</code> <code>去重</code> <code>array操作</code></p>
+<h3 id="普通用法：过滤和排序数组"><a href="#普通用法：过滤和排序数组" class="headerlink" title="普通用法：过滤和排序数组"></a>普通用法：过滤和排序数组</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">点击「+」→ 选择「列表操作」</span><br><span class="line">  → 右侧面板</span><br><span class="line">    → 选择输入的 Array 变量</span><br><span class="line">      → 配置操作：</span><br><span class="line">          过滤（Filter）：设置过滤条件</span><br><span class="line">          排序（Order by）：选择字段 + 升序/降序</span><br><span class="line">          取前 N 条（Take）：设置数量</span><br><span class="line">        → 保存</span><br></pre></td></tr></table></figure>
+
+<h3 id="进阶用法-15"><a href="#进阶用法-15" class="headerlink" title="进阶用法"></a>进阶用法</h3><p><strong>① 组合操作：先过滤再排序再取 Top 3</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">过滤：score &gt; 0.5</span><br><span class="line">  → 排序：按 score 降序</span><br><span class="line">    → 取前 3 条</span><br><span class="line">      → 传入模板节点展示</span><br></pre></td></tr></table></figure>
+
+<p><strong>② 知识库检索结果二次筛选</strong><br>知识库返回 10 条 → 列表操作过滤 score &lt; 0.7 的 → 只保留高质量结果传给 LLM。</p>
+<hr>
+<h2 id="18-Agent-节点"><a href="#18-Agent-节点" class="headerlink" title="18. Agent 节点"></a>18. Agent 节点</h2><p><strong>关键词</strong>：<code>agent</code> <code>自主</code> <code>推理</code> <code>工具调用</code> <code>autonomous</code> <code>多步推理</code> <code>CoT</code> <code>自主决策</code> <code>智能体</code></p>
+<h3 id="普通用法：配置自主推理节点"><a href="#普通用法：配置自主推理节点" class="headerlink" title="普通用法：配置自主推理节点"></a>普通用法：配置自主推理节点</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">点击「+」→ 选择「Agent」</span><br><span class="line">  → 右侧面板</span><br><span class="line">    → 选择 Agent 策略（如 Function Calling / ReAct）</span><br><span class="line">      → 选择模型</span><br><span class="line">        → 添加可用工具（搜索 / 计算器 / 自定义工具等）</span><br><span class="line">          → 设置最大迭代次数</span><br><span class="line">            → 填写任务描述</span><br><span class="line">              → 保存</span><br></pre></td></tr></table></figure>
+
+<h3 id="进阶用法-16"><a href="#进阶用法-16" class="headerlink" title="进阶用法"></a>进阶用法</h3><p><strong>① Agent + 工具组合</strong><br>配置多个工具（网络搜索 + 代码执行 + 知识库）→ Agent 自主决定调用哪个工具。</p>
+<p><strong>② 作为 LLM 节点的扩展</strong><br>将复杂多步任务拆解 → 前置步骤用固定节点处理 → 不确定步骤交给 Agent 节点。</p>
+<p><strong>③ 自定义 Agent 策略</strong><br>开发 CoT &#x2F; ToT &#x2F; GoT 等自定义策略 → 上传为插件 → 在 Agent 节点中选用。</p>
+<hr>
+<h2 id="19-工具节点-Tools"><a href="#19-工具节点-Tools" class="headerlink" title="19. 工具节点 Tools"></a>19. 工具节点 Tools</h2><p><strong>关键词</strong>：<code>工具</code> <code>tool</code> <code>搜索</code> <code>画图</code> <code>插件</code> <code>search</code> <code>Dalle</code> <code>Google</code> <code>计算</code> <code>发邮件</code> <code>内置工具</code></p>
+<h3 id="普通用法：添加内置工具"><a href="#普通用法：添加内置工具" class="headerlink" title="普通用法：添加内置工具"></a>普通用法：添加内置工具</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">点击「+」→ 选择「工具」</span><br><span class="line">  → 工具列表中搜索目标工具（如 Google Search / Dalle-3 / 计算器）</span><br><span class="line">    → 点击工具卡片添加到画布</span><br><span class="line">      → 右侧面板</span><br><span class="line">        → 配置必填输入参数</span><br><span class="line">          → 将上游变量映射到工具输入</span><br><span class="line">            → 保存</span><br></pre></td></tr></table></figure>
+
+<h3 id="进阶用法-17"><a href="#进阶用法-17" class="headerlink" title="进阶用法"></a>进阶用法</h3><p><strong>① 将 Workflow 发布为工具</strong><br>工作流发布 → 「发布为工具」→ 其他 Agent &#x2F; Workflow 可调用此工作流作为工具。</p>
+<p><strong>② 自定义工具接入</strong><br>设置 → 工具 → 自定义工具 → 填写 OpenAPI Schema → 即可在工具节点中使用。</p>
+<hr>
+<h2 id="20-人工审核节点-Human-Input"><a href="#20-人工审核节点-Human-Input" class="headerlink" title="20. 人工审核节点 Human Input"></a>20. 人工审核节点 Human Input</h2><p><strong>关键词</strong>：<code>人工</code> <code>审核</code> <code>暂停</code> <code>确认</code> <code>human</code> <code>review</code> <code>人工干预</code> <code>等待审批</code> <code>人在回路</code></p>
+<h3 id="普通用法：工作流暂停等待人工确认"><a href="#普通用法：工作流暂停等待人工确认" class="headerlink" title="普通用法：工作流暂停等待人工确认"></a>普通用法：工作流暂停等待人工确认</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">点击「+」→ 选择「Human Input」</span><br><span class="line">  → 右侧面板</span><br><span class="line">    → 设置展示给审核人的内容（引用上游变量）</span><br><span class="line">      → 配置审核选项：</span><br><span class="line">          通过（Approved）→ 连接继续节点</span><br><span class="line">          修改（Edit）→ 连接修改后继续节点</span><br><span class="line">          拒绝（Rejected）→ 连接拒绝处理节点</span><br><span class="line">        → 保存</span><br></pre></td></tr></table></figure>
+
+<h3 id="进阶用法-18"><a href="#进阶用法-18" class="headerlink" title="进阶用法"></a>进阶用法</h3><p><strong>① 内容审核场景</strong><br>LLM 生成内容 → Human Input 节点暂停 → 人工审阅 → 通过后发布 &#x2F; 拒绝后重新生成。</p>
+<p><strong>② 审核人修改内容</strong><br>审核人可在 Human Input 节点直接编辑 LLM 输出 → 修改后的内容传入下游节点。</p>
+<hr>
+<h2 id="21-系统变量-System-Variables"><a href="#21-系统变量-System-Variables" class="headerlink" title="21. 系统变量 System Variables"></a>21. 系统变量 System Variables</h2><p><strong>关键词</strong>：<code>系统变量</code> <code>用户ID</code> <code>时间</code> <code>time</code> <code>时刻</code> <code>日期</code> <code>对话轮次</code> <code>sys</code> <code>app ID</code> <code>会话ID</code> <code>内置变量</code></p>
+<h3 id="引用格式"><a href="#引用格式" class="headerlink" title="引用格式"></a>引用格式</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;#sys.变量名#&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="系统变量列表"><a href="#系统变量列表" class="headerlink" title="系统变量列表"></a>系统变量列表</h3><table>
+<thead>
+<tr>
+<th>变量</th>
+<th>说明</th>
+<th>适用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>sys.query</code></td>
+<td>用户当前输入</td>
+<td>Chatflow &#x2F; Workflow</td>
+</tr>
+<tr>
+<td><code>sys.user_id</code></td>
+<td>用户唯一标识</td>
+<td>Chatflow &#x2F; Workflow</td>
+</tr>
+<tr>
+<td><code>sys.app_id</code></td>
+<td>当前应用 ID</td>
+<td>Chatflow &#x2F; Workflow</td>
+</tr>
+<tr>
+<td><code>sys.workflow_id</code></td>
+<td>工作流 ID</td>
+<td>Workflow</td>
+</tr>
+<tr>
+<td><code>sys.dialogue_count</code></td>
+<td>当前对话轮次数</td>
+<td>Chatflow</td>
+</tr>
+<tr>
+<td><code>sys.conversation_id</code></td>
+<td>会话 ID</td>
+<td>Chatflow</td>
+</tr>
+<tr>
+<td><code>sys.files</code></td>
+<td>用户上传的文件</td>
+<td>Chatflow &#x2F; Workflow</td>
+</tr>
+</tbody></table>
+<h3 id="进阶用法-19"><a href="#进阶用法-19" class="headerlink" title="进阶用法"></a>进阶用法</h3><p><strong>① 用对话轮次做判断（首轮 &#x2F; 多轮）</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">IF: sys.dialogue_count == 1</span><br><span class="line">  → 新用户引导流程</span><br><span class="line">ELSE:</span><br><span class="line">  → 正常对话流程</span><br></pre></td></tr></table></figure>
+
+<p><strong>② 获取当前时间（需配合代码节点）</strong><br>系统变量无直接时间变量 → 在代码节点中用 <code>datetime.datetime.now()</code> 获取：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>() -&gt; <span class="built_in">dict</span>:</span><br><span class="line">    now = datetime.datetime.now()</span><br><span class="line">    <span class="keyword">return</span> &#123;<span class="string">&quot;current_time&quot;</span>: now.strftime(<span class="string">&quot;%Y-%m-%d %H:%M:%S&quot;</span>)&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>③ 用户 ID 实现个性化</strong><br>引用 <code>sys.user_id</code> → 传入 HTTP 节点查询用户数据库 → 实现个性化回复。</p>
+<hr>
+<h2 id="22-调试与测试"><a href="#22-调试与测试" class="headerlink" title="22. 调试与测试"></a>22. 调试与测试</h2><p><strong>关键词</strong>：<code>调试</code> <code>测试</code> <code>debug</code> <code>preview</code> <code>日志</code> <code>log</code> <code>追踪</code> <code>trace</code> <code>单步测试</code> <code>预览</code> <code>错误排查</code></p>
+<h3 id="普通用法：全流程预览测试"><a href="#普通用法：全流程预览测试" class="headerlink" title="普通用法：全流程预览测试"></a>普通用法：全流程预览测试</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">右上角「预览」按钮</span><br><span class="line">  → 在弹出面板输入测试数据</span><br><span class="line">    → 点击「运行」</span><br><span class="line">      → 点击右上角「查看日志 - 追踪」</span><br><span class="line">        → 逐节点查看：输入 / 输出 / 耗时 / Token 消耗</span><br></pre></td></tr></table></figure>
+
+<h3 id="普通用法：单节点测试"><a href="#普通用法：单节点测试" class="headerlink" title="普通用法：单节点测试"></a>普通用法：单节点测试</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">点击目标节点</span><br><span class="line">  → 右侧面板右上角「···」菜单</span><br><span class="line">    → 选择「单步测试」</span><br><span class="line">      → 填写输入值</span><br><span class="line">        → 点击「运行」</span><br><span class="line">          → 查看该节点的输出结果</span><br></pre></td></tr></table></figure>
+
+<h3 id="进阶用法-20"><a href="#进阶用法-20" class="headerlink" title="进阶用法"></a>进阶用法</h3><p><strong>① 追踪变量传递路径</strong><br>在日志追踪界面 → 点击具体节点 → 展开查看该节点的完整输入输出 → 快速定位数据在哪一步出错。</p>
+<p><strong>② 定位连线问题</strong><br>节点变量引用报错 → 检查「节点名称」是否与引用路径一致（节点改名后引用路径需同步更新）。</p>
+<p><strong>③ 导出 DSL 备份</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">右上角「···」菜单</span><br><span class="line">  → 导出 DSL</span><br><span class="line">    → 保存为 .yml 文件</span><br><span class="line">      → 可导入到其他工作区复用</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><em>最后更新：2026年 | 适用 Dify v0.6+ 版本</em></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2026/03/17/Dify%E8%8A%82%E7%82%B9%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/" data-id="cuidlQZrV82LKfJB8JPBD7GA1" data-title="Dify节点速查手册" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2026/03/17/hello-world/" class="article-date">
+  <time class="dt-published" datetime="2026-03-17T06:29:04.948Z" itemprop="datePublished">2026-03-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2026/03/17/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2026/03/17/hello-world/" data-id="cuidF4x45ZCdkxYH_vd9PbtFL" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/03/">March 2026</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2026/03/17/Dify%E8%8A%82%E7%82%B9%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/">Dify节点速查手册</a>
+          </li>
+        
+          <li>
+            <a href="/2026/03/17/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2026 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
